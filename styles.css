@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #050505;
+    background-image: radial-gradient(circle at center, #0a1128 0%, #050505 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.bg-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 255, 242, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 242, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 0;
+    pointer-events: none; 
+    transform: perspective(500px) rotateX(25deg);
+    transform-origin: top;
+    filter: blur(0.5px);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(10, 10, 15, 0.8); 
+    padding: 30px;
+    border-radius: 24px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.profile-img {
+    width: 180px; 
+    height: 180px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 3px solid #00fff2;
+    margin-bottom: 20px;
+    box-shadow: 0 0 25px rgba(0, 255, 242, 0.3);
+}
+
+.profile h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 0 10px rgba(0, 255, 242, 0.2);
+}
+
+.profile .bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    /* Añadimos espacio por encima y, sobre todo, por debajo */
+    margin-top: 10px;
+    margin-bottom: 30px; 
+}
+
+.link-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    color: white;
+    text-decoration: none;
+    padding: 16px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.link-btn i, .link-btn img {
+    font-size: 1.4rem;
+    width: 24px;
+    text-align: center;
+}
+
+.btn-htb:hover { border-color: #9fef00; box-shadow: 0 0 20px rgba(159, 239, 0, 0.4); transform: translateY(-4px); }
+.btn-thm:hover { border-color: #ff413c; box-shadow: 0 0 20px rgba(255, 65, 60, 0.4); transform: translateY(-4px); }
+.btn-linkedin:hover { border-color: #0077b5; box-shadow: 0 0 20px rgba(0, 119, 181, 0.4); transform: translateY(-4px); }
+.btn-github:hover { border-color: #ffffff; box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); transform: translateY(-4px); }
+.btn-email:hover { border-color: #9d4edd; box-shadow: 0 0 20px rgba(157, 78, 221, 0.4); transform: translateY(-4px); }
+.btn-phone:hover { border-color: #ff9500; box-shadow: 0 0 20px rgba(255, 149, 0, 0.4); transform: translateY(-4px); }
+.btn-medium:hover { border-color: #ffffff; box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); transform: translateY(-4px); }
+
+.social-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.3rem;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    text-decoration: none;
+}
+
+.social-icon img {
+    width: 22px;
+    height: 22px;
+}
+
+.social-icon:hover {
+    transform: scale(1.15) translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 255, 242, 0.2);
+}
+
+.page-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.page-footer p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.page-footer .heart {
+    color: #ff6b9d;
+    animation: heartbeat 0.6s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@media (max-width: 768px) {
+    /* Aplicamos el color de marca al borde de forma permanente */
+    .btn-htb { border-color: rgba(159, 239, 0, 0.6); }
+    .btn-thm { border-color: rgba(255, 65, 60, 0.6); }
+    .btn-linkedin { border-color: rgba(0, 119, 181, 0.6); }
+    .btn-github { border-color: rgba(255, 255, 255, 0.4); }
+    .btn-email { border-color: rgba(157, 78, 221, 0.6); }
+    .btn-phone { border-color: rgba(255, 149, 0, 0.6); }
+    .btn-medium { border-color: rgba(255, 255, 255, 0.4); }
+
+    /* Efecto al tocar con el dedo (Active) */
+    .link-btn:active {
+        background: rgba(255, 255, 255, 0.1);
+        transform: scale(0.98); /* Pequeño efecto de pulsación */
+    }
+}
