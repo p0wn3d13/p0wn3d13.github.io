@@ -354,8 +354,8 @@ Redes profesionales:
                 const apiKey = typeof CONFIG !== 'undefined' ? CONFIG.GEMINI_API_KEY : null;
                 if (!apiKey) throw new Error('Error de configuración: API Key no encontrada.');
 
-                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;                const messageElements = document.querySelectorAll('.bubble:not(.loading-bubble)');
-                const history = [];
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;                
+            const history = [];
 
                 messageElements.forEach(el => {
                     const isUserMsg = el.classList.contains('user-bubble');
