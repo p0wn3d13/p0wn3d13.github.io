@@ -355,10 +355,7 @@ Redes profesionales:
                 if (!apiKey) throw new Error('Error de configuración: API Key no encontrada.');
 
                 const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
-                
-                // 👇 AQUÍ ESTÁ LA LÍNEA CORREGIDA 👇
                 const messageElements = document.querySelectorAll('.bubble:not(.loading-bubble)');
-                
                 const history = [];
 
                 messageElements.forEach(el => {
