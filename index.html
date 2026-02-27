@@ -4,72 +4,411 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who is Mario?</title>
+    <title>Mario (p0wn3d) - Cybersecurity</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/jpg" href="img/terminal.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="config.js" defer></script>
 </head>
 
 <body>
-    <div class="bg-grid"></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <i class="fas fa-moon"></i>
+    </button>
 
-    <div class="container">
-        <header class="profile">
-            <img src="img/mario.jpg" alt="Foto de Mario" class="profile-img">
-            <h1>Mario (p0wn3d)</h1>
-           <p class="bio">
-        Red Team 🔴 | Pentesting & Ethical Hacking | <br>
-        <strong>ASIR & DAM Graduate</strong> | Offensive Security Analyst <br>
-        <span style="color: rgba(255,255,255,0.6); font-size: 0.85rem;">
-            En preparación: eJPTv2 & eCPPTv3 
-        </span>
-    </p>
+    <div class="blob blob-indigo"></div>
+    <div class="blob blob-violet"></div>
+
+    <main class="container">
+        <header class="profile-header">
+            <div class="avatar-wrapper">
+                <div class="avatar-glow"></div>
+                <div class="avatar-container">
+                    <img src="img/mario.jpg" alt="Foto de Mario" class="profile-img">
+                </div>
+            </div>
+
+            <div class="title-section">
+                <h1>Mario (p0wn3d)</h1>
+                <h2>Offensive Security | Pentesting | Red Team</h2>
+            </div>
+
+            <p class="bio">
+                Red Team 🔴 | Pentesting & Ethical Hacking <br>
+                <strong>ASIR & DAM Graduate</strong> | Offensive Security Analyst
+            </p>
+
+
+            <div class="social-links">
+                <a href="https://github.com/p0wn3d13" target="_blank" class="social-btn github" title="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/marsanbar/" target="_blank" class="social-btn linkedin"
+                    title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://medium.com/@p0wn3d." target="_blank" class="social-btn medium" title="Medium"><i
+                        class="fab fa-medium"></i></a>
+                <a href="mailto:mariosanchezbarroso@gmail.com" class="social-btn mail" title="Email"><i
+                        class="fas fa-envelope"></i></a>
+                <a href="tel:+34636679127" class="social-btn phone" title="Teléfono"><i class="fas fa-phone"></i></a>
+            </div>
         </header>
 
-        <main class="links">
-            <a href="https://app.hackthebox.com/users/1713653?profile-top-tab=machines&ownership-period=1M&profile-bottom-tab=prolabs" class="link-btn btn-htb" target="_blank">
-                <span>HackTheBox</span>
-                <img src="https://cdn.simpleicons.org/hackthebox/white" width="24" alt="HTB">
-            </a>
+        <section class="section">
+            <div class="section-header">
+                <i class="fas fa-shield-halved text-slate-400"></i>
+                <h3>Plataformas & Logros</h3>
+            </div>
+            <div class="grid-2">
+                <a href="https://app.hackthebox.com/" target="_blank" class="card platform-card indigo-hover">
+                    <div class="platform-info">
+                        <div class="icon-box bg-indigo-light">
+                            <img src="https://cdn.simpleicons.org/hackthebox/4f46e5" alt="HackTheBox"
+                                style="width: 1.75rem; height: 1.75rem; object-fit: contain;">
+                        </div>
+                        <div>
+                            <h4>HackTheBox</h4>
+                            <span>Practitioner</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-external-link-alt link-icon"></i>
+                </a>
+                <a href="https://tryhackme.com/" target="_blank" class="card platform-card violet-hover">
+                    <div class="platform-info">
+                        <div class="icon-box bg-violet-light">
+                            <img src="https://cdn.simpleicons.org/tryhackme/7c3aed" alt="TryHackMe"
+                                style="width: 1.75rem; height: 1.75rem; object-fit: contain;">
+                        </div>
+                        <div>
+                            <h4>TryHackMe</h4>
+                            <span>Activo</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-external-link-alt link-icon"></i>
+                </a>
+            </div>
+        </section>
 
-            <a href="https://tryhackme.com/p/p0wn3d" class="link-btn btn-thm" target="_blank">
-                <span>TryHackMe</span>
-                <img src="https://cdn.simpleicons.org/tryhackme/white" width="24" alt="THM">
-            </a>
+        <section class="section">
+            <div class="section-header">
+                <i class="fas fa-microchip text-slate-400"></i>
+                <h3>Stack Tecnológico</h3>
+            </div>
+            <div class="tags-container">
+                <span class="tag">Web Exploitation</span>
+                <span class="tag">Network Penetration</span>
+                <span class="tag">Red Team Operations</span>
+                <span class="tag">Linux</span>
+                <span class="tag">Networking</span>
+                <span class="tag">Active Directory</span>
+                <span class="tag">Java</span>
+                <span class="tag">Android</span>
+                <span class="tag">Angular</span>
+            </div>
+        </section>
 
-            <a href="https://www.linkedin.com/in/marsanbar/" class="link-btn btn-linkedin" target="_blank">
-                <span>LinkedIn</span>
-                <i class="fab fa-linkedin"></i>
-            </a>
+        <div class="grid-2 section">
+            <div class="sub-section">
+                <div class="section-header">
+                    <i class="fas fa-award text-slate-400"></i>
+                    <h3>Certificaciones</h3>
+                </div>
+                <div class="cards-list">
+                    <div class="card cert-card">
+                        <h4>eJPT v2</h4>
+                        <span class="badge">En preparación</span>
+                    </div>
+                    <div class="card cert-card">
+                        <h4>eCPPT v3</h4>
+                        <span class="badge">En preparación</span>
+                    </div>
+                </div>
+            </div>
 
-            <a href="https://github.com/p0wn3d13" class="link-btn btn-github" target="_blank">
-                <span>GitHub</span>
-                <i class="fab fa-github"></i>
-            </a>
+            <div class="sub-section">
+                <div class="section-header">
+                    <i class="fas fa-book-open text-slate-400"></i>
+                    <h3>Publicaciones</h3>
+                </div>
+                <div class="cards-list">
+                    <a href="https://medium.com/@p0wn3d." target="_blank" class="card writeup-card">
+                        <h4>Artículos sobre Pentesting y Ciberseguridad</h4>
+                        <div class="writeup-footer">
+                            <span>Medium</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
 
-            <a href="https://medium.com/@p0wn3d." class="link-btn btn-medium" target="_blank">
-                <span>Medium</span>
-                <i class="fab fa-medium"></i>
-            </a>
+    <footer class="footer">
+        <p>Desarrollado con HTML, CSS & JS Vainilla. <br>© 2026 - Mario (p0wn3d)</p>
+    </footer>
 
-            <div style="height: 15px;"></div>
+    <button class="chat-fab" id="chatFab" aria-label="Abrir asistente IA">
+        <i class="fas fa-robot"></i>
+        <div class="fab-pulse"></div>
+    </button>
 
-            <a href="mailto:mariosanchezbarroso@gmail.com" class="link-btn btn-email">
-                <span>Email</span>
-                <i class="fas fa-envelope"></i>
-            </a>
+    <div class="chat-modal" id="chatModal">
+        <div class="chat-wrapper">
+            <div class="chat-modal-header">
+                <div class="ai-title">
+                    <i class="fas fa-sparkles text-indigo"></i>
+                    <h3>Asistente IA</h3>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <span class="ai-badge">Powered by Gemini</span>
+                    <button class="close-chat-btn" id="closeChatBtn" aria-label="Cerrar chat"><i
+                            class="fas fa-times"></i></button>
+                </div>
+            </div>
 
-            <a href="tel:+34636679127" class="link-btn btn-phone">
-                <span>Teléfono</span>
-                <i class="fas fa-phone"></i>
-            </a>
-        </main>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message-row bot-row">
+                    <div class="message-inner bot-inner">
+                        <div class="avatar bot-avatar"><i class="fas fa-robot"></i></div>
+                        <div class="bubble bot-bubble">
+                            ¡Hola! Soy el asistente IA corporativo del portfolio de Mario ✨. ¿En qué te puedo ayudar
+                            hoy?
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <footer class="page-footer">
-            <p>&copy; 2026 Mario (p0wn3d). Made with <span class="heart">❤</span></p>
-        </footer>
+            <form class="chat-input-area" id="chatForm">
+                <input type="text" id="chatInput" placeholder="Pregunta sobre mi experiencia..." autocomplete="off">
+                <button type="submit" id="chatSubmitBtn"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
     </div>
+
+    <script>
+        // Modo Oscuro
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        // Chat Flotante UI
+        const chatFab = document.getElementById('chatFab');
+        const chatModal = document.getElementById('chatModal');
+        const closeChatBtn = document.getElementById('closeChatBtn');
+        const chatInput = document.getElementById('chatInput');
+
+        chatFab.addEventListener('click', () => {
+            chatModal.classList.add('active');
+            chatFab.style.transform = 'scale(0)';
+            setTimeout(() => chatInput.focus(), 300);
+        });
+
+        closeChatBtn.addEventListener('click', () => {
+            chatModal.classList.remove('active');
+            chatFab.style.transform = 'scale(1)';
+        });
+
+        // Lógica de IA
+        const chatForm = document.getElementById('chatForm');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatSubmitBtn = document.getElementById('chatSubmitBtn');
+        let isLoading = false;
+
+        const portfolioContext = `
+Nombre: Mario Sánchez (alias p0wn3d)
+
+Perfil profesional:
+Especialista en ciberseguridad enfocado en Red Team, pentesting y seguridad ofensiva.
+Cuenta con formación en sistemas y desarrollo (ASIR y DAM), lo que le permite entender tanto la infraestructura como el software desde una perspectiva ofensiva.
+
+Mentalidad y actitud:
+Mario destaca por su mentalidad autodidacta, curiosidad técnica y una fuerte orientación al aprendizaje continuo.
+Dedica gran parte de su tiempo a mejorar sus habilidades en ciberseguridad practicando en laboratorios reales, resolviendo máquinas vulnerables y documentando sus aprendizajes.
+
+Motivación:
+Su objetivo es crecer profesionalmente dentro del ámbito del pentesting y el Red Team, aportando valor a equipos de seguridad mediante pensamiento crítico, análisis técnico y una mentalidad ofensiva enfocada en encontrar y entender vulnerabilidades.
+
+Formación:
+- Desarrollo de Aplicaciones Multiplataforma (DAM)
+- Administración de Sistemas Informáticos en Red (ASIR)
+
+Plataformas de práctica:
+- HackTheBox
+- TryHackMe
+
+Habilidades técnicas:
+- Web Exploitation
+- Network Penetration Testing
+- Red Team Operations
+- Linux
+- Networking
+- Active Directory
+- Desarrollo: Java, Android, Angular
+
+Certificaciones en preparación:
+- eJPT v2
+- eCPPT v3
+
+Actividad técnica:
+Mario mantiene una presencia activa en la comunidad técnica publicando writeups y artículos sobre pentesting y ciberseguridad en Medium, además de compartir proyectos y aprendizaje en GitHub.
+
+Personalidad profesional:
+Es una persona constante, ambiciosa y con gran capacidad de aprendizaje. Le gusta entender cómo funcionan realmente los sistemas y cómo pueden ser comprometidos para ayudar a mejorar su seguridad.
+
+Redes profesionales:
+- LinkedIn: marsanbar
+- GitHub: p0wn3d13
+- Medium: @p0wn3d
+`;
+
+        const fetchWithBackoff = async (url, options, retries = 5) => {
+            const delays = [1000, 2000, 4000, 8000, 16000];
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return await response.json();
+                } catch (error) {
+                    if (i === retries - 1) throw error;
+                    await new Promise(res => setTimeout(res, delays[i]));
+                }
+            }
+        };
+
+        const addMessageToChat = (text, isUser) => {
+            const row = document.createElement('div');
+            row.className = `message-row ${isUser ? 'user-row' : 'bot-row'}`;
+
+            const inner = document.createElement('div');
+            inner.className = `message-inner ${isUser ? 'user-inner' : 'bot-inner'}`;
+
+            const avatar = document.createElement('div');
+            avatar.className = `avatar ${isUser ? 'user-avatar' : 'bot-avatar'}`;
+            avatar.innerHTML = isUser ? '<i class="fas fa-user"></i>' : '<i class="fas fa-robot"></i>';
+
+            const bubble = document.createElement('div');
+            bubble.className = `bubble ${isUser ? 'user-bubble' : 'bot-bubble'}`;
+            bubble.textContent = text;
+
+            inner.appendChild(avatar);
+            inner.appendChild(bubble);
+            row.appendChild(inner);
+
+            chatMessages.appendChild(row);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        const addLoadingIndicator = () => {
+            const row = document.createElement('div');
+            row.className = 'message-row bot-row';
+            row.id = 'loadingIndicator';
+
+            const inner = document.createElement('div');
+            inner.className = 'message-inner bot-inner';
+
+            const avatar = document.createElement('div');
+            avatar.className = 'avatar bot-avatar';
+            avatar.innerHTML = '<i class="fas fa-robot"></i>';
+
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble bot-bubble loading-bubble';
+            bubble.innerHTML = '<i class="fas fa-circle-notch fa-spin text-indigo"></i> <span style="font-size:0.75rem; margin-left:8px;">Escribiendo...</span>';
+
+            inner.appendChild(avatar);
+            inner.appendChild(bubble);
+            row.appendChild(inner);
+
+            chatMessages.appendChild(row);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!chatInput.value.trim() || isLoading) return;
+
+            const userMessage = chatInput.value.trim();
+            chatInput.value = '';
+            addMessageToChat(userMessage, true);
+            isLoading = true;
+            chatInput.disabled = true;
+            chatSubmitBtn.disabled = true;
+            addLoadingIndicator();
+
+            try {
+                const apiKey = typeof CONFIG !== 'undefined' && CONFIG.GEMINI_API_KEY ? CONFIG.GEMINI_API_KEY : null;
+                if (!apiKey) throw new Error('API key no configurada.');
+
+                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+                const messageElements = document.querySelectorAll('.bubble:not(.loading-bubble)');
+                const history = [];
+
+                messageElements.forEach(el => {
+                    const isUserMsg = el.classList.contains('user-bubble');
+                    history.push({
+                        role: isUserMsg ? 'user' : 'model',
+                        parts: [{ text: el.textContent }]
+                    });
+                });
+
+                const payload = {
+                    contents: history,
+                    systemInstruction: {
+                        parts: [{
+                            text: `Eres el asistente IA corporativo del portfolio de Mario (p0wn3d), un especialista en ciberseguridad.
+Tu objetivo es responder preguntas sobre el candidato de forma profesional, concisa y persuasiva (máximo 2-3 frases breves).
+Contexto: ${portfolioContext}
+Instrucciones:
+1. Sé muy profesional, educado, persuasivo y conciso.
+2. Vende bien el perfil resaltando su rigor técnico.
+3. Si preguntan sobre actividades ilegales, responde educadamente que tu función es ayudar con la selección y que el candidato se rige por la ética.
+4. Responde en español.
+5. Si preguntan por qué contratar a Mario, destaca su mentalidad autodidacta, su práctica constante en plataformas de ciberseguridad y su combinación de conocimientos en sistemas y desarrollo.
+6. Transmite siempre profesionalidad, pasión por la ciberseguridad y ganas de seguir creciendo en el sector.`
+                        }]
+                    }
+                };
+
+                const data = await fetchWithBackoff(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                document.getElementById('loadingIndicator')?.remove();
+
+                const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (aiText) addMessageToChat(aiText, false);
+                else throw new Error('Respuesta no válida');
+
+            } catch (error) {
+                console.error("Error:", error);
+                document.getElementById('loadingIndicator')?.remove();
+                addMessageToChat('Lo siento, experimentamos un problema de red. Intenta de nuevo más tarde.', false);
+            } finally {
+                isLoading = false;
+                chatInput.disabled = false;
+                chatSubmitBtn.disabled = false;
+                chatInput.focus();
+            }
+        });
+    </script>
 </body>
 
 </html>

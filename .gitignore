@@ -1,0 +1,22 @@
+# Archivos de configuración local
+.env
+.env.local
+config.js
+
+# Node modules (si usas npm)
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
