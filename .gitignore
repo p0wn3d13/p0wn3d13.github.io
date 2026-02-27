@@ -1,7 +1,6 @@
 # Archivos de configuración local
 .env
 .env.local
-config.js
 
 # Node modules (si usas npm)
 node_modules/

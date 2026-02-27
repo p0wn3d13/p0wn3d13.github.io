@@ -36,13 +36,12 @@
             </div>
 
             <p class="bio">
-                Red Team 🔴 | Pentesting & Ethical Hacking <br>
                 <strong>ASIR & DAM Graduate</strong> | Offensive Security Analyst
             </p>
 
 
             <div class="social-links">
-                <a href="https://github.com/p0wn3d13" target="_blank" class="social-btn github" title="GitHub"><i
+                <a href="https://github.com/mariosb-13" target="_blank" class="social-btn github" title="GitHub"><i
                         class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/marsanbar/" target="_blank" class="social-btn linkedin"
                     title="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -73,7 +72,7 @@
                     </div>
                     <i class="fas fa-external-link-alt link-icon"></i>
                 </a>
-                <a href="https://tryhackme.com/" target="_blank" class="card platform-card violet-hover">
+                <a href="https://tryhackme.com/p/p0wn3d" target="_blank" class="card platform-card violet-hover">
                     <div class="platform-info">
                         <div class="icon-box bg-violet-light">
                             <img src="https://cdn.simpleicons.org/tryhackme/7c3aed" alt="TryHackMe"
@@ -352,8 +351,8 @@ Redes profesionales:
             addLoadingIndicator();
 
             try {
-                const apiKey = typeof CONFIG !== 'undefined' && CONFIG.GEMINI_API_KEY ? CONFIG.GEMINI_API_KEY : null;
-                if (!apiKey) throw new Error('API key no configurada.');
+                const apiKey = typeof CONFIG !== 'undefined' ? CONFIG.GEMINI_API_KEY : null;
+                if (!apiKey) throw new Error('Error de configuración: API Key no encontrada.');
 
                 const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
                 const messageElements = document.querySelectorAll('.bubble:not(.loading-bubble)');
@@ -400,7 +399,7 @@ Instrucciones:
             } catch (error) {
                 console.error("Error:", error);
                 document.getElementById('loadingIndicator')?.remove();
-                addMessageToChat('Lo siento, experimentamos un problema de red. Intenta de nuevo más tarde.', false);
+                addMessageToChat(`Error: ${error.message || 'Problema de conexión.'}`, false);
             } finally {
                 isLoading = false;
                 chatInput.disabled = false;
