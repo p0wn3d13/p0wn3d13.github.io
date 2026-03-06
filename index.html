@@ -39,7 +39,6 @@
                 <strong>ASIR & DAM Graduate</strong> | Offensive Security Analyst
             </p>
 
-
             <div class="social-links">
                 <a href="https://github.com/mariosb-13" target="_blank" class="social-btn github" title="GitHub"><i
                         class="fab fa-github"></i></a>
@@ -47,7 +46,7 @@
                     title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://medium.com/@p0wn3d." target="_blank" class="social-btn medium" title="Medium"><i
                         class="fab fa-medium"></i></a>
-                <a href="mailto:mariosanchezbarroso@gmail.com" class="social-btn mail" title="Email"><i
+                <a href="#" id="mailBtn" class="social-btn mail" title="Email"><i
                         class="fas fa-envelope"></i></a>
                 <a href="tel:+34636679127" class="social-btn phone" title="Teléfono"><i class="fas fa-phone"></i></a>
             </div>
@@ -206,6 +205,15 @@
                 icon.classList.replace('fa-sun', 'fa-moon');
             }
         });
+
+        // --- OFUSCACIÓN DE CORREO ---
+        const mailBtn = document.getElementById('mailBtn');
+        if (mailBtn) {
+            const u = "mariosanchezbarroso";
+            const d = "gmail.com";
+            mailBtn.href = "mailto:" + u + "@" + d;
+        }
+        // ----------------------------
 
         // Chat Flotante UI
         const chatFab = document.getElementById('chatFab');
