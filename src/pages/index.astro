@@ -1,0 +1,396 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Mario (p0wn3d) | Portfolio">
+	<header class="profile-header">
+		<div class="avatar-wrapper">
+			<div class="avatar-glow"></div>
+			<div class="avatar-container">
+				<img
+					src="/img/mario.jpg"
+					alt="Foto de Mario"
+					class="profile-img"
+				/>
+			</div>
+		</div>
+
+		<div class="title-section">
+			<h1>Mario (p0wn3d)</h1>
+			<h2>Offensive Security | Pentesting | Red Team</h2>
+		</div>
+
+		<p class="bio">
+			<strong>ASIR & DAM Graduate</strong> | Offensive Security Analyst
+		</p>
+
+		<div class="social-links">
+			<a
+				href="https://github.com/mariosb-13"
+				target="_blank"
+				class="social-btn github"
+				title="GitHub"><i class="fab fa-github"></i></a
+			>
+			<a
+				href="https://www.linkedin.com/in/marsanbar/"
+				target="_blank"
+				class="social-btn linkedin"
+				title="LinkedIn"><i class="fab fa-linkedin"></i></a
+			>
+			<a
+				href="https://medium.com/@p0wn3d."
+				target="_blank"
+				class="social-btn medium"
+				title="Medium"><i class="fab fa-medium"></i></a
+			>
+			<a href="#" id="mailBtn" class="social-btn mail" title="Email"
+				><i class="fas fa-envelope"></i></a
+			>
+			<a href="tel:+34636679127" class="social-btn phone" title="Teléfono"
+				><i class="fas fa-phone"></i></a
+			>
+		</div>
+	</header>
+
+	<section class="section">
+		<div class="section-header">
+			<i class="fas fa-shield-halved text-slate-400"></i>
+			<h3>Plataformas & Logros</h3>
+		</div>
+		<div class="grid-2">
+			<a
+				href="https://app.hackthebox.com/"
+				target="_blank"
+				class="card platform-card indigo-hover"
+			>
+				<div class="platform-info">
+					<div class="icon-box bg-indigo-light">
+						<img
+							src="https://cdn.simpleicons.org/hackthebox/4f46e5"
+							alt="HackTheBox"
+							style="width: 1.75rem; height: 1.75rem; object-fit: contain;"
+						/>
+					</div>
+					<div>
+						<h4>HackTheBox</h4>
+						<span>Practitioner</span>
+					</div>
+				</div>
+				<i class="fas fa-external-link-alt link-icon"></i>
+			</a>
+			<a
+				href="https://tryhackme.com/p/p0wn3d"
+				target="_blank"
+				class="card platform-card violet-hover"
+			>
+				<div class="platform-info">
+					<div class="icon-box bg-violet-light">
+						<img
+							src="https://cdn.simpleicons.org/tryhackme/7c3aed"
+							alt="TryHackMe"
+							style="width: 1.75rem; height: 1.75rem; object-fit: contain;"
+						/>
+					</div>
+					<div>
+						<h4>TryHackMe</h4>
+						<span>Activo</span>
+					</div>
+				</div>
+				<i class="fas fa-external-link-alt link-icon"></i>
+			</a>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="section-header">
+			<i class="fas fa-microchip text-slate-400"></i>
+			<h3>Stack Tecnológico</h3>
+		</div>
+		<div class="tags-container">
+			<span class="tag">Web Exploitation</span>
+			<span class="tag">Network Penetration</span>
+			<span class="tag">Red Team Operations</span>
+			<span class="tag">Linux</span>
+			<span class="tag">Networking</span>
+			<span class="tag">Active Directory</span>
+			<span class="tag">Java</span>
+			<span class="tag">Android</span>
+			<span class="tag">Angular</span>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="section-header">
+			<i class="fas fa-code-branch text-slate-400"></i>
+			<h3>Proyectos Destacados</h3>
+		</div>
+		<div class="projects-showcase">
+			<div class="card project-card featured-project">
+				<div class="project-header">
+					<div class="project-title-group">
+						<i class="fas fa-laptop-code text-indigo"></i>
+						<h4>SneakerHub (TFG)</h4>
+					</div>
+					<a
+						href="https://sneakerhub.es"
+						target="_blank"
+						class="project-link"
+						title="Visitar SneakerHub"
+					>
+						<i class="fas fa-external-link-alt"></i>
+					</a>
+				</div>
+				<p class="project-desc">
+					Plataforma multiplataforma (Web y Móvil) desarrollada como
+					Trabajo de Fin de Grado. Cliente web construido con <strong
+						>Angular</strong
+					> y aplicación nativa para <strong>Android en Java</strong>.
+					Demuestra conocimientos sólidos en arquitectura de software,
+					consumo de APIs y despliegue.
+				</p>
+				<div class="tags-container" style="margin-top: 1rem;">
+					<span class="tag">Angular</span>
+					<span class="tag">Android (Java)</span>
+					<span class="tag">Multiplataforma</span>
+				</div>
+			</div>
+
+			<a
+				href="/writeups/htb-maquina-ejemplo"
+				class="coming-soon-card"
+				style="text-decoration: none; cursor: pointer;"
+			>
+				<div class="coming-soon-content">
+					<div class="coming-soon-icon">
+						<i class="fas fa-terminal"></i>
+					</div>
+					<h4 style="transition: color 0.3s;">Último Writeup</h4>
+					<p
+						style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;"
+					>
+						HackTheBox: Máquina Ejemplo
+					</p>
+					<div class="coming-soon-particles">
+						<div class="particle"></div>
+						<div class="particle"></div>
+						<div class="particle"></div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="section-header">
+			<i class="fas fa-graduation-cap text-slate-400"></i>
+			<h3>Formación y Cursos</h3>
+		</div>
+		<div class="grid-2">
+			<div class="sub-section">
+				<h4
+					style="margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em;"
+				>
+					Educación Oficial
+				</h4>
+				<div class="cards-list">
+					<div class="card cert-card">
+						<h4>
+							Desarrollo de Aplicaciones Multiplataforma (DAM)
+						</h4>
+						<span
+							class="badge"
+							style="background-color: var(--indigo-light); color: var(--indigo); margin-top: 0.5rem;"
+							>Grado Superior</span
+						>
+					</div>
+					<div class="card cert-card">
+						<h4>
+							Administración de Sistemas Informáticos en Red
+							(ASIR)
+						</h4>
+						<span
+							class="badge"
+							style="background-color: var(--indigo-light); color: var(--indigo); margin-top: 0.5rem;"
+							>Grado Superior</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub-section">
+				<h4
+					style="margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em;"
+				>
+					Formación Continua
+				</h4>
+				<div class="cards-list">
+					<div class="card cert-card">
+						<h4>
+							Curso completo de Hacking Ético y Ciberseguridad
+						</h4>
+						<div
+							style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;"
+						>
+							<span
+								style="font-size: 0.75rem; color: var(--text-muted); font-weight: bold;"
+								>Udemy</span
+							>
+							<span
+								class="badge"
+								style="border-color: #f59e0b; color: #d97706; background-color: #fef3c7;"
+								>En progreso</span
+							>
+						</div>
+					</div>
+					<div class="card cert-card">
+						<div
+							style="display: flex; justify-content: space-between; align-items: flex-start;"
+						>
+							<h4>Introducción a Ethical Hacking (12h)</h4>
+							<a
+								href="https://openwebinars.net/cert/JtTs"
+								target="_blank"
+								class="project-link"
+								title="Ver certificado original"
+							>
+								<i
+									class="fas fa-external-link-alt"
+									style="font-size: 0.8rem;"></i>
+							</a>
+						</div>
+						<div
+							style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;"
+						>
+							<span
+								style="font-size: 0.75rem; color: var(--text-muted); font-weight: bold;"
+								>OpenWebinars</span
+							>
+							<i
+								class="fas fa-check-circle"
+								style="color: #10b981; font-size: 1rem;"></i>
+						</div>
+					</div>
+					<div class="card cert-card">
+						<div
+							style="display: flex; justify-content: space-between; align-items: flex-start;"
+						>
+							<h4>Hacking Web (6h)</h4>
+							<a
+								href="https://openwebinars.net/cert/Ztnu"
+								target="_blank"
+								class="project-link"
+								title="Ver certificado original"
+							>
+								<i
+									class="fas fa-external-link-alt"
+									style="font-size: 0.8rem;"></i>
+							</a>
+						</div>
+						<div
+							style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;"
+						>
+							<span
+								style="font-size: 0.75rem; color: var(--text-muted); font-weight: bold;"
+								>OpenWebinars</span
+							>
+							<i
+								class="fas fa-check-circle"
+								style="color: #10b981; font-size: 1rem;"></i>
+						</div>
+					</div>
+					<div class="card cert-card">
+						<div
+							style="display: flex; justify-content: space-between; align-items: flex-start;"
+						>
+							<h4>Despliegues con Ansible (4h)</h4>
+							<a
+								href="https://openwebinars.net/cert/pEBL"
+								target="_blank"
+								class="project-link"
+								title="Ver certificado original"
+							>
+								<i
+									class="fas fa-external-link-alt"
+									style="font-size: 0.8rem;"></i>
+							</a>
+						</div>
+						<div
+							style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;"
+						>
+							<span
+								style="font-size: 0.75rem; color: var(--text-muted); font-weight: bold;"
+								>OpenWebinars</span
+							>
+							<i
+								class="fas fa-check-circle"
+								style="color: #10b981; font-size: 1rem;"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="grid-2 section">
+		<div class="sub-section">
+			<div class="section-header">
+				<i class="fas fa-award text-slate-400"></i>
+				<h3>Certificaciones</h3>
+			</div>
+			<div class="cards-list">
+				<div class="card cert-card">
+					<h4>eJPT v2</h4>
+					<div
+						style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;"
+					>
+						<span
+							style="font-size: 0.75rem; color: var(--text-muted); font-weight: bold;"
+							>INE Security</span
+						>
+						<span
+							class="badge"
+							style="border-color: #3b82f6; color: #2563eb; background-color: #eff6ff;"
+							>Preparando</span
+						>
+					</div>
+				</div>
+				<div class="card cert-card">
+					<h4>eCPPT v3</h4>
+					<div
+						style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;"
+					>
+						<span
+							style="font-size: 0.75rem; color: var(--text-muted); font-weight: bold;"
+							>INE Security</span
+						>
+						<span
+							class="badge"
+							style="border-color: #3b82f6; color: #2563eb; background-color: #eff6ff;"
+							>Objetivo 2026</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sub-section">
+			<div class="section-header">
+				<i class="fas fa-book-open text-slate-400"></i>
+				<h3>Publicaciones</h3>
+			</div>
+			<div class="cards-list">
+				<a
+					href="https://medium.com/@p0wn3d."
+					target="_blank"
+					class="card writeup-card"
+				>
+					<h4>Artículos sobre Pentesting y Ciberseguridad</h4>
+					<div class="writeup-footer">
+						<span>Medium</span>
+						<i class="fas fa-external-link-alt"></i>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</Layout>

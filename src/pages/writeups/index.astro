@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// Usamos el import.meta.glob de Vite, que es el estándar actual y no da fallos de tipos
+const posts = Object.values(import.meta.glob('./*.md', { eager: true }));
+---
+
+<Layout title="Writeups & Blog | Mario (p0wn3d)">
+    <section class="section" style="margin-top: 2rem;">
+        <div class="section-header">
+            <i class="fas fa-folder-open text-slate-400"></i>
+            <h3>Directorio de Writeups</h3>
+        </div>
+        
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">
+            Documentación técnica, resolución de máquinas y apuntes sobre ciberseguridad y sistemas.
+        </p>
+
+        <div class="cards-list">
+            {posts.map((post: any) => (
+                <a href={post.url} class="card writeup-card">
+                    <h4>{post.frontmatter.title}</h4>
+                    <div class="writeup-footer">
+                        <span>Leer artículo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+            ))}
+        </div>
+    </section>
+</Layout>
