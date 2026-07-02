@@ -1,7 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-// Usamos el import.meta.glob de Vite, que es el estándar actual y no da fallos de tipos
 const posts = Object.values(import.meta.glob('./*.md', { eager: true }));
 ---
 
