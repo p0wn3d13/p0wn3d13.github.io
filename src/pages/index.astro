@@ -408,6 +408,7 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 
 			<form
+				id="contactForm"
 				action="https://api.web3forms.com/submit"
 				method="POST"
 				class="contact-form"
@@ -474,6 +475,7 @@ import Layout from "../layouts/Layout.astro";
 					Enviar mensaje <i class="fas fa-paper-plane"></i>
 				</button>
 			</form>
+			<div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
 		</div>
 	</section>
 
@@ -511,6 +513,48 @@ import Layout from "../layouts/Layout.astro";
 				const contacto = document.getElementById('contacto');
 				if (contacto) {
 					smoothScroll(contacto, 800);
+				}
+			});
+		}
+
+		const contactForm = document.getElementById('contactForm') as HTMLFormElement | null;
+		const formStatus = document.getElementById('formStatus');
+		const submitButton = contactForm?.querySelector('.submit-btn') as HTMLButtonElement | null;
+		const originalSubmitLabel = submitButton?.innerHTML ?? '';
+
+		if (contactForm && formStatus && submitButton) {
+			contactForm.addEventListener('submit', async (event: Event) => {
+				event.preventDefault();
+
+				if (!contactForm.checkValidity()) {
+					contactForm.reportValidity();
+					return;
+				}
+
+				submitButton.disabled = true;
+				submitButton.innerHTML = 'Enviando...';
+				formStatus.className = 'form-status form-status--loading';
+				formStatus.textContent = 'Enviando tu mensaje...';
+
+				try {
+					const response = await fetch(contactForm.action, {
+						method: contactForm.method,
+						body: new FormData(contactForm)
+					});
+
+					if (!response.ok) {
+						throw new Error('No se pudo enviar');
+					}
+
+					contactForm.reset();
+					formStatus.className = 'form-status form-status--success';
+					formStatus.textContent = '¡Mensaje enviado! Gracias por contactar.';
+				} catch (error) {
+					formStatus.className = 'form-status form-status--error';
+					formStatus.textContent = 'No se pudo enviar el mensaje. Inténtalo de nuevo.';
+				} finally {
+					submitButton.disabled = false;
+					submitButton.innerHTML = originalSubmitLabel;
 				}
 			});
 		}

@@ -1537,6 +1537,43 @@ body.dark-mode .contact-form textarea {
     background-color: #fa5c4a;
 }
 
+.submit-btn:disabled {
+    opacity: 0.75;
+    cursor: wait;
+    transform: none;
+    box-shadow: none;
+}
+
+.form-status {
+    display: none;
+    margin-top: 0.25rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.form-status--loading {
+    display: block;
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--indigo);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.form-status--success {
+    display: block;
+    background: rgba(34, 197, 94, 0.12);
+    color: #15803d;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.form-status--error {
+    display: block;
+    background: rgba(239, 68, 68, 0.12);
+    color: #b91c1c;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
 .contact-form textarea {
     resize: vertical;
 }
