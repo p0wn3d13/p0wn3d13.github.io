@@ -1084,6 +1084,45 @@ body.dark-mode .bot-avatar {
     line-height: 1.5;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     word-break: break-word;
+    white-space: normal;
+}
+
+.bubble p,
+.bubble ul,
+.bubble ol,
+.bubble li,
+.bubble strong,
+.bubble em,
+.bubble code {
+    margin: 0;
+}
+
+.bubble p + p,
+.bubble ul + p,
+.bubble p + ul {
+    margin-top: 0.5rem;
+}
+
+.bubble ul,
+.bubble ol {
+    padding-left: 1.2rem;
+    margin-top: 0.35rem;
+}
+
+.bubble li + li {
+    margin-top: 0.2rem;
+}
+
+.bubble strong {
+    color: var(--indigo);
+    font-weight: 700;
+}
+
+.bubble code {
+    background: rgba(99, 102, 241, 0.12);
+    border-radius: 0.35rem;
+    padding: 0.1rem 0.35rem;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .bot-bubble {

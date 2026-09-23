@@ -129,7 +129,57 @@ const { title = "Who is Mario?" } = Astro.props;
         const chatSubmitBtn = document.getElementById('chatSubmitBtn');
         let isLoading = false;
 
-        const portfolioContext = "Mario Sánchez, alias p0wn3d, especialista en ciberseguridad, Red Team, pentesting, ASIR y DAM.";
+        const portfolioContext = "Mario Sánchez Barroso, alias p0wn3d. Graduado en ASIR y DAM, con enfoque en ciberseguridad ofensiva, pentesting, Red Team, web exploitation, Active Directory y hardening. También tiene experiencia en desarrollo multiplataforma con Angular y Java para Android, con interés en seguridad aplicada, análisis técnico y automatización. Es un perfil orientado a investigación, pruebas de intrusión y mejora continua en entornos reales.";
+
+        const escapeHtml = (value = '') => value
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/\"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+
+        const applyInlineMarkdown = (value = '') => {
+            return escapeHtml(value)
+                .replace(/`([^`]+)`/g, '<code>$1</code>')
+                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                .replace(/__(.+?)__/g, '<strong>$1</strong>')
+                .replace(/\*(.+?)\*/g, '<em>$1</em>');
+        };
+
+        const renderMarkdown = (text = '') => {
+            if (!text) return '';
+
+            const blocks = text.replace(/\r\n/g, '\n').split(/\n{2,}/);
+
+            return blocks.map((block) => {
+                const lines = block.split('\n');
+                const listItems = [];
+                const paragraphs = [];
+
+                for (const rawLine of lines) {
+                    const line = rawLine.trim();
+                    if (!line) continue;
+
+                    if (/^[-*]\s+/.test(line)) {
+                        listItems.push(`<li>${applyInlineMarkdown(line.replace(/^[-*]\s+/, ''))}</li>`);
+                        continue;
+                    }
+
+                    if (/^\d+\.\s+/.test(line)) {
+                        listItems.push(`<li>${applyInlineMarkdown(line.replace(/^\d+\.\s+/, ''))}</li>`);
+                        continue;
+                    }
+
+                    paragraphs.push(`<p>${applyInlineMarkdown(line)}</p>`);
+                }
+
+                if (listItems.length) {
+                    return `${paragraphs.join('')}<ul>${listItems.join('')}</ul>`;
+                }
+
+                return paragraphs.join('');
+            }).join('');
+        };
 
         const fetchWithBackoff = async (url, options, retries = 5) => {
             const delays = [1000, 2000, 4000, 8000, 16000];
@@ -155,7 +205,7 @@ const { title = "Who is Mario?" } = Astro.props;
             avatar.innerHTML = isUser ? '<i class="fas fa-user"></i>' : '<i class="fas fa-robot"></i>';
             const bubble = document.createElement('div');
             bubble.className = `bubble ${isUser ? 'user-bubble' : 'bot-bubble'}`;
-            bubble.textContent = text;
+            bubble.innerHTML = isUser ? escapeHtml(text) : renderMarkdown(text);
             inner.appendChild(avatar);
             inner.appendChild(bubble);
             row.appendChild(inner);
