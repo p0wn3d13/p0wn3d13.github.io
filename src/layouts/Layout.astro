@@ -23,7 +23,15 @@ const { title = "Who is Mario?" } = Astro.props;
             </a>
             <div class="nav-links">
                 <a href="/" class="nav-link">Portfolio</a>
-                <a href="/writeups" class="nav-link">Writeups</a>
+                <div class="nav-dropdown-wrap" id="contentMenuWrap">
+                    <button class="nav-dropdown-toggle" id="contentMenuToggle" type="button" aria-expanded="false" aria-controls="contentMenu">
+                        Contenido <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="nav-dropdown" id="contentMenu" role="menu">
+                        <a href="/writeups" role="menuitem"><i class="fas fa-flag" aria-hidden="true"></i> Writeups</a>
+                        <a href="/apuntes" role="menuitem"><i class="fas fa-book-open" aria-hidden="true"></i> Apuntes</a>
+                    </div>
+                </div>
                 
                 <a href="/CV_Mario_Sanchez_Barroso.pdf" download="CV_Mario_Sanchez_Barroso.pdf" class="nav-cv-btn">
                     Descargar CV <i class="fas fa-download"></i>
@@ -104,6 +112,29 @@ const { title = "Who is Mario?" } = Astro.props;
             } else {
                 localStorage.setItem('theme', 'light');
                 icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        const contentMenuWrap = document.getElementById('contentMenuWrap');
+        const contentMenuToggle = document.getElementById('contentMenuToggle');
+
+        contentMenuToggle.addEventListener('click', () => {
+            const isOpen = contentMenuWrap.classList.toggle('is-open');
+            contentMenuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!contentMenuWrap.contains(event.target)) {
+                contentMenuWrap.classList.remove('is-open');
+                contentMenuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                contentMenuWrap.classList.remove('is-open');
+                contentMenuToggle.setAttribute('aria-expanded', 'false');
+                contentMenuToggle.focus();
             }
         });
 

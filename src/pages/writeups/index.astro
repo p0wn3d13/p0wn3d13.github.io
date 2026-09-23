@@ -1,30 +1,37 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const posts = Object.values(import.meta.glob('./*.md', { eager: true }));
+const ctfs = Object.values(import.meta.glob('./*.md', { eager: true }));
 ---
 
-<Layout title="Writeups & Blog | Mario (p0wn3d)">
+<Layout title="CTF Writeups | Mario (p0wn3d)">
     <section class="section" style="margin-top: 2rem;">
         <div class="section-header">
             <i class="fas fa-folder-open text-slate-400"></i>
-            <h3>Directorio de Writeups</h3>
+            <h3>Write-ups de CTFs</h3>
         </div>
         
         <p style="color: var(--text-muted); margin-bottom: 2rem;">
-            Documentación técnica, resolución de máquinas y apuntes sobre ciberseguridad y sistemas.
+            Resoluciones de máquinas, laboratorios y retos de ciberseguridad.
         </p>
 
-        <div class="cards-list">
-            {posts.map((post: any) => (
-                <a href={post.url} class="card writeup-card">
-                    <h4>{post.frontmatter.title}</h4>
-                    <div class="writeup-footer">
-                        <span>Leer artículo</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-            ))}
+        <div class="writeup-group">
+            <div class="section-header">
+                <i class="fas fa-flag text-indigo"></i>
+                <h3>Máquinas y laboratorios</h3>
+            </div>
+
+            <div class="cards-list">
+                {ctfs.map((post: any) => (
+                    <a href={post.url} class="card writeup-card">
+                        <h4>{post.frontmatter.title}</h4>
+                        <div class="writeup-footer">
+                            <span>Leer resolución</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                ))}
+            </div>
         </div>
     </section>
 </Layout>

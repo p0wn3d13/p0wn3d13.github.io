@@ -1,0 +1,49 @@
+---
+import Layout from './Layout.astro';
+
+const { title = 'Write-up | Mario (p0wn3d)' } = Astro.props;
+---
+
+<Layout title={title}>
+    <article class="writeup-page">
+        <slot />
+    </article>
+</Layout>
+
+<script>
+    const copyButtons = document.querySelectorAll('.writeup-page pre');
+
+    copyButtons.forEach((codeBlock) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'code-copy-btn';
+        button.innerHTML = '<i class="fas fa-copy" aria-hidden="true"></i>';
+        button.setAttribute('aria-label', 'Copiar código');
+        button.title = 'Copiar código';
+
+        codeBlock.appendChild(button);
+
+        button.addEventListener('click', async () => {
+            const code = codeBlock.querySelector('code')?.textContent ?? codeBlock.textContent ?? '';
+
+            try {
+                await navigator.clipboard.writeText(code.trim());
+                button.classList.add('is-copied');
+                button.innerHTML = '<i class="fas fa-check" aria-hidden="true"></i>';
+                button.setAttribute('aria-label', 'Código copiado');
+                button.title = 'Código copiado';
+
+                window.setTimeout(() => {
+                    button.classList.remove('is-copied');
+                    button.innerHTML = '<i class="fas fa-copy" aria-hidden="true"></i>';
+                    button.setAttribute('aria-label', 'Copiar código');
+                    button.title = 'Copiar código';
+                }, 1800);
+            } catch {
+                button.innerHTML = '<i class="fas fa-triangle-exclamation" aria-hidden="true"></i>';
+                button.setAttribute('aria-label', 'No se pudo copiar el código');
+                button.title = 'No se pudo copiar el código';
+            }
+        });
+    });
+</script>
