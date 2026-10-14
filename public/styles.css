@@ -391,6 +391,11 @@ a:hover::after {
     border-color: var(--indigo);
 }
 
+.social-btn.cv:hover {
+    color: #f59e0b;
+    border-color: rgba(245, 158, 11, 0.35);
+}
+
 .social-btn.medium:hover {
     color: #000000;
     border-color: rgba(0, 0, 0, 0.2);
@@ -735,6 +740,19 @@ body.dark-mode .card:hover {
     justify-content: center;
 }
 
+.platform-logo {
+    display: block;
+    width: 1.75rem;
+    height: 1.75rem;
+    object-fit: contain;
+    border-radius: 0.35rem;
+}
+
+body.dark-mode .platform-logo {
+    padding: 0.15rem;
+    background-color: #f8fafc;
+}
+
 .platform-card:hover .icon-box {
     background-color: var(--bg-main);
 }
@@ -816,6 +834,55 @@ body.dark-mode .card:hover {
     color: var(--indigo);
     box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
     transform: translateY(-3px) scale(1.05);
+}
+
+.technology-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding-inline: 0.8rem;
+}
+
+.technology-tag img {
+    width: 1.15rem;
+    height: 1.15rem;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 1px rgba(79, 70, 229, 0.45));
+}
+
+.technology-tag--java img {
+    width: 1.35rem;
+    height: 1.35rem;
+}
+
+.technology-tag--nmap img {
+    width: 1.5rem;
+    height: auto;
+    padding: 0.08rem;
+    background-color: #e0f2fe;
+    border-radius: 0.25rem;
+    filter: none;
+}
+
+.technology-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.technology-group h4 {
+    margin: 0 0 0.65rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+body.dark-mode .technology-tag:not(.technology-tag--nmap) img {
+    padding: 0.1rem;
+    background-color: #f8fafc;
+    border-radius: 0.25rem;
+    filter: none;
 }
 
 body.dark-mode .tag {

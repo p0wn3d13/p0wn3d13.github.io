@@ -40,8 +40,7 @@ import Layout from "../layouts/Layout.astro";
 			<a href="https://app.hackthebox.com/" target="_blank" class="card platform-card indigo-hover">
 				<div class="platform-info">
 					<div class="icon-box bg-indigo-light">
-						<img src="https://cdn.simpleicons.org/hackthebox/4f46e5" alt="HackTheBox"
-							style="width: 1.75rem; height: 1.75rem; object-fit: contain;" />
+						<img class="platform-logo" src="/icons/hackthebox.svg" alt="" aria-hidden="true" />
 					</div>
 					<div>
 						<h4>HackTheBox</h4>
@@ -53,8 +52,7 @@ import Layout from "../layouts/Layout.astro";
 			<a href="https://tryhackme.com/p/p0wn3d" target="_blank" class="card platform-card violet-hover">
 				<div class="platform-info">
 					<div class="icon-box bg-violet-light">
-						<img src="https://cdn.simpleicons.org/tryhackme/7c3aed" alt="TryHackMe"
-							style="width: 1.75rem; height: 1.75rem; object-fit: contain;" />
+						<img class="platform-logo" src="/icons/tryhackme.svg" alt="" aria-hidden="true" />
 					</div>
 					<div>
 						<h4>TryHackMe</h4>
@@ -71,17 +69,89 @@ import Layout from "../layouts/Layout.astro";
 			<i class="fas fa-microchip text-slate-400"></i>
 			<h3>Tecnologías</h3>
 		</div>
-		<div class="tags-container">
-			<span class="tag">Web Exploitation</span>
-			<span class="tag">Ethical Hacking</span>
-			<span class="tag">Red Team</span>
-			<span class="tag">Privilege Escalation</span>
-			<span class="tag">Linux</span>
-			<span class="tag">Active Directory</span>
-			<span class="tag">Hardening</span>
-			<span class="tag">Java</span>
-			<span class="tag">Android</span>
-			<span class="tag">Angular</span>
+		<div class="technology-groups">
+			<div class="technology-group">
+				<h4>Ciberseguridad y sistemas</h4>
+				<div class="tags-container">
+					<span class="tag technology-tag">
+						<img src="/icons/linux.svg" alt="" aria-hidden="true" />
+						<span>Linux</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/microsoft.svg" alt="" aria-hidden="true" />
+						<span>Windows Server</span>
+					</span>
+					<span class="tag technology-tag technology-tag--nmap">
+						<img src="/icons/nmap-eye.png" alt="" aria-hidden="true" />
+						<span>Nmap</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/wireshark.svg" alt="" aria-hidden="true" />
+						<span>Wireshark</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/burpsuite.svg" alt="" aria-hidden="true" />
+						<span>Burp Suite</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/openssl.svg" alt="" aria-hidden="true" />
+						<span>Hardening</span>
+					</span>
+				</div>
+			</div>
+			<div class="technology-group">
+				<h4>Desarrollo</h4>
+				<div class="tags-container">
+					<span class="tag technology-tag technology-tag--java">
+						<img src="/icons/java.svg" alt="" aria-hidden="true" />
+						<span>Java</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/php.svg" alt="" aria-hidden="true" />
+						<span>PHP</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/javascript.svg" alt="" aria-hidden="true" />
+						<span>JavaScript</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/typescript.svg" alt="" aria-hidden="true" />
+						<span>TypeScript</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/mysql.svg" alt="" aria-hidden="true" />
+						<span>SQL</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/angular.svg" alt="" aria-hidden="true" />
+						<span>Angular</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/html5.svg" alt="" aria-hidden="true" />
+						<span>HTML5</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/css3.svg" alt="" aria-hidden="true" />
+						<span>CSS3</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/bootstrap.svg" alt="" aria-hidden="true" />
+						<span>Bootstrap</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/figma.svg" alt="" aria-hidden="true" />
+						<span>Figma</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/android.svg" alt="" aria-hidden="true" />
+						<span>Android (Java)</span>
+					</span>
+					<span class="tag technology-tag">
+						<img src="/icons/flutter.svg" alt="" aria-hidden="true" />
+						<span>Flutter</span>
+					</span>
+				</div>
+			</div>
 		</div>
 	</section>
 
